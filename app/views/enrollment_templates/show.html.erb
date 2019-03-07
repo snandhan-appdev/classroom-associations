@@ -38,7 +38,9 @@
         Student
       </dt>
       <dd>
-        <%= @enrollment.student_id %>
+        <a href="/students/<%= @enrollment.student_id %>"> 
+          <%= Student.find(@enrollment.student_id).first_name + " " + Student.find(@enrollment.student_id).last_name  %>
+        </a>  
       </dd>
 
       <dt>
